@@ -1,16 +1,16 @@
 import React from 'react';
 import './Form.css';
 
-const ImageLinkForm = ({onInputChange}) => {
+const ImageLinkForm = ({onInputChange, onFormSubmit}) => {
   return (
     <div className="ImageLinkForm">
       <p className="intro">
         {`Enter an image URL below, and we'll detect any faces on it`}
       </p>
-      <div className="form">
+      <form className="form" onSubmit={onFormSubmit}>
         <input className="input" type="text" onChange={onInputChange}/>
         <button className="detect">Detect</button>
-      </div>
+      </form>
     </div>
   );
 }

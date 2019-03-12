@@ -77,6 +77,11 @@ class App extends Component {
     console.log(event);
   }
 
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    console.log('submitted');
+  }
+
   render() {
     return (
       <div className="App">
@@ -84,7 +89,7 @@ class App extends Component {
         <Nav />
         <Logo />
         <Rank />
-        <ImageLinkForm onInputChange={this.onInputChange}/>
+        <ImageLinkForm onInputChange={this.onInputChange} onFormSubmit={this.onFormSubmit}/>
       </div>
     );
   }
