@@ -1,11 +1,10 @@
 import React from 'react';
+import './Nav.css';
 
 const Nav = () => {
   return (
-    <nav className="Nav" style={
-      {display: 'flex', justifyContent: 'flex-end', padding: '0px 20px'}
-    }>
-      <p>Sign Out</p>
+    <nav className="Nav">
+      <p className="Nav_p">Sign Out</p>
     </nav>
   );
 }

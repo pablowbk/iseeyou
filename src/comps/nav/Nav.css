@@ -1,0 +1,20 @@
+.Nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.Nav_p {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--lightest);
+  padding: 5px;
+  margin: 0;
+  transition: all 300ms ease;
+}
+
+.Nav_p:hover, .Nav_p:focus  {
+  color: var(--darkest);
+  cursor: pointer;
+}

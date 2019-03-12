@@ -1,0 +1,11 @@
+.Rank {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rank h1, .Rank h2 {
+  margin: 0;
+}

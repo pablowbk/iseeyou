@@ -1,3 +1,15 @@
+:root {
+  --darkest: rgb(23, 37, 42);
+  --darker: rgb(43, 122, 120);
+  --primary: rgb(58, 175, 169);
+  --lighter:  rgb(222, 242, 241);
+  --lightest: rgb(254, 255, 255);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +18,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--primary);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  cursor: pointer;
 }

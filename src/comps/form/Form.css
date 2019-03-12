@@ -1,0 +1,41 @@
+.ImageLinkForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+
+
+}
+.input {
+  padding: 10px;
+  border: none;
+
+}
+
+.detect {
+  padding: 10px 20px;
+  border: none;
+  border: 2px solid var(--darkest);
+  background: var(--darker);
+  color: var(--lightest);
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: all 300ms ease;
+}
+
+.detect:hover, .detect:focus {
+  background: var(--darkest);
+}
