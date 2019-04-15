@@ -4,30 +4,38 @@
   justify-content: center;
   align-items: center;
   margin-top: 2em;
+  margin-bottom: 2em;
+  z-index: 10;
 }
 
 .intro {
   text-align: center;
   font-size: 1.2em;
+  padding: 0 20px;
 }
 
 .form {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
-  width: 70%;
-
-
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 0 var(--darker);
 }
+
 .input {
   padding: 10px;
+  border-radius: 3px;
   border: none;
-
+  margin-right: 5px;
+  font-size: 1.2em;
 }
 
 .detect {
+  width: 100px;
   padding: 10px 20px;
   border: none;
+  border-radius: 3px;
   border: 2px solid var(--darkest);
   background: var(--darker);
   color: var(--lightest);
@@ -38,4 +46,16 @@
 
 .detect:hover, .detect:focus {
   background: var(--darkest);
+}
+
+@media (max-width: 500px) {
+  .form {
+    flex-direction: column;
+  }
+  .input {
+    flex: 1;
+  }
+  .detect {
+    margin-top: 10px;
+  }
 }

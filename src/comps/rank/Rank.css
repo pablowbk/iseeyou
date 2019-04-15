@@ -9,3 +9,7 @@
 .Rank h1, .Rank h2 {
   margin: 0;
 }
+
+.Rank h1 {
+  color: var(--lightest);
+}
