@@ -120,7 +120,7 @@ class App extends Component {
   }
 
   displayFaceBox = (box) => {
-    console.log(box);
+    if (box) {console.log('Face Detected!')}
     this.setState({box: box})
   }
 
@@ -135,7 +135,21 @@ class App extends Component {
       .predict(
         Clarifai.FACE_DETECT_MODEL,
         this.state.input)
-      .then(response => this.displayFaceBox(this.calcFaceLocation(response)))
+      .then(response => {
+        if (response) {
+          fetch('http://localhost:3001/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              id: this.state.user.id
+            })})
+            .then(resp => resp.json())
+            .then(count => {
+              this.setState(Object.assign(this.state.user, {entries: count}))
+            })
+          }
+        this.displayFaceBox(this.calcFaceLocation(response))
+      })
       .catch(err => console.log(err));
   }
 
