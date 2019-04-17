@@ -1,11 +1,11 @@
 import React from 'react';
 import './Rank.css';
 
-const Rank = () => {
+const Rank = ({ name, entries }) => {
   return (
     <div className="Rank">
-      <h2>{`User, your rank is...`}</h2>
-      <h1>{`# 1`}</h1>
+      <h2>{`${name}, your rank is...`}</h2>
+      <h1>{`# ${entries}`}</h1>
     </div>
   );
 }
