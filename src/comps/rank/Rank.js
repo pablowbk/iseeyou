@@ -4,8 +4,9 @@ import './Rank.css';
 const Rank = ({ name, entries }) => {
   return (
     <div className="Rank">
-      <h2>{`Hi ${name}, your rank is...`}</h2>
+      <h2>{`Hi ${name}! Your total count is...`}</h2>
       <h1>{`# ${entries}`}</h1>
+      { entries > 0 ? <h2>faces detected!</h2> : null }
     </div>
   );
 }
